@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>LSB-STEGANOGRAPHY</title>
+  </head>
+<body>
+  Step 1 - Choose Secret Data :
+  <input type="file" id="myFile" />
+  <hr/>
+  <br/>
+  Step 2 - Choose Cover(Image) :
+  <input type="file" id="cover" />
+  <hr/>
+
+  <br/>
+  Step 3 - Hiding data into image(click button) :
+  <button id="hideData">Hide Data into Image</button>
+  <hr/>
+
+  <br/>
+  Cover Image shown here after click hideData(before hiding):
+  <canvas id="canvas" width="400" height="400"></canvas>
+  <hr/>
+
+  <br/>
+  Step 4 - Cover Image + Data shown here (after hiding), right click on image and save to your pc:
+  <canvas id="secret" width="400" height="400"></canvas>
+  <hr/>
+  <br/>
+  Step 5 - Load back the image from step(4) :
+  <input type="file" id="loadFile" />
+  <hr/>
+  Cover Image shown here after load image, and file automatically downloaded for you :)
+  <canvas id="coverAfter" width="400" height="400"></canvas>
+</body>
+</html>
