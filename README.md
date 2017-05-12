@@ -4,8 +4,16 @@ LSB(Least Significant Bit) method for steganography using javascript.
 # Demo
 Demo(follow step by step) - https://jsfiddle.net/norlihazmeyGhazali/quo42a2n/ - tested on .txt file
 
+**Consist of 5 steps :**
+1) Select secret data .txt files
+2) Select cover image
+3) Click hide button
+   - this time, both cover image before and after rendered inside canvas element
+4) Save cover image(contain secret data). Right click and save into your pc
+5) Select again the saved file and it automatically  download .txt file containing your secret data(data maybe not accurated as original form.....as for now..)
+
 # How it works
-The main important concept in steganography is hiding secret information inside image without decreased image qualitiy. This image react as a cover and at the same time, your secret data is hiding inside. You can send those image to someone, and the one who received this image will use same tools to extract/get the data back into original form.
+The main important concept in steganography is hiding secret information inside image without decreased image quality. This image react as a cover and at the same time, your secret data is hiding inside. You can send those image to someone, and the one who received this image will use same tools to extract/get the data back into original form.
 
 Internally, the secret data's binary bit was used and replacing the cover image pixel's bit. The replacing occured on the Lease Significant Bit also known as LSB which remove or clear first two bits from cover image's pixel and replaced with secret data. Only first two bits were used in order to retain the quality of cover image. See below how the replacing bits occured :
 
@@ -46,7 +54,7 @@ The binary used here is just for an example for illustration purpose :
 
 Quality of cover image still acceptable unless the replacing occured at the highest nibble(bits 4-7) instead of lowest nibble(bits 0-3). 
 
-Super Important Reminders/Notes
+Super Duper Important Reminders/Notes
 ========================
 1) Please do not select/choose .txt file containing too much data inside, as it may bloated/slow down your pc's performance as its need more resources to operate/iterate every bits/bytes for each data.
 2) Select only .txt file, others may/maybe not works
